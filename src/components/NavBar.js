@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 export default function NavBar(props) {
   const { mode } = props; // Destructure mode from props
@@ -15,11 +16,11 @@ export default function NavBar(props) {
         
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="/">Home </a>
-              </li>
+              <li className="nav-item ">  
+                <Link className="nav-link active" to="/">Home </Link>
+             </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">About</a>
+                <Link className="nav-link" to="/About">About</Link>
               </li>
             </ul>
             <div className={`form-check form-switch text-${props.mode===`light`?`dark`:`light`}`}>
